@@ -14,7 +14,7 @@ function Navbar() {
     getUser();
   }, []);
   const getUser = async () => {
-    const User = await axios.get("http://localhost:8000/user", {
+    const User = await axios.get("https://stockflow-clone.onrender.com/user", {
       headers: {
         Authorization: `${window.localStorage.getItem("token")}`,
       },

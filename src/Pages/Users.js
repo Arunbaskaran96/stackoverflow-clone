@@ -45,7 +45,9 @@ function Users() {
 
   const getUsers = async () => {
     try {
-      const user = await axios.get("http://localhost:8000/users");
+      const user = await axios.get(
+        "https://stockflow-clone.onrender.com/users"
+      );
       setUsers(user.data);
     } catch (error) {
       console.log(error);

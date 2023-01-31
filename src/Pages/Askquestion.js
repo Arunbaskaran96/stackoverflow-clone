@@ -29,11 +29,15 @@ function Askquestion() {
       return errors;
     },
     onSubmit: async (values) => {
-      await axios.post("http://localhost:8000/question", values, {
-        headers: {
-          Authorization: `${window.localStorage.getItem("token")}`,
-        },
-      });
+      await axios.post(
+        "https://stockflow-clone.onrender.com/question",
+        values,
+        {
+          headers: {
+            Authorization: `${window.localStorage.getItem("token")}`,
+          },
+        }
+      );
       nav("/portal/questions");
     },
   });

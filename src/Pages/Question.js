@@ -11,11 +11,14 @@ function Question() {
 
   const getQuestions = async () => {
     try {
-      const question = await axios.get("http://localhost:8000/questions/", {
-        headers: {
-          Authorization: `${window.localStorage.getItem("token")}`,
-        },
-      });
+      const question = await axios.get(
+        "https://stockflow-clone.onrender.com/questions/",
+        {
+          headers: {
+            Authorization: `${window.localStorage.getItem("token")}`,
+          },
+        }
+      );
       setQuestions(question.data);
       // console.log(question.data);
     } catch (error) {

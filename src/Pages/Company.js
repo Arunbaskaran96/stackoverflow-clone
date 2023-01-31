@@ -10,8 +10,11 @@ function Company() {
 
   const getcompany = async () => {
     try {
-      const item = await axios.get("http://localhost:8000/companies");
+      const item = await axios.get(
+        "https://stockflow-clone.onrender.com/companies"
+      );
       setCompanies(item.data);
+      console.log(item.data);
     } catch (error) {
       console.log(error);
     }

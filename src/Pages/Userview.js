@@ -12,7 +12,9 @@ function Userview() {
   }, []);
   const getUser = async () => {
     try {
-      const User = await axios.get(`http://localhost:8000/user/${params.id}`);
+      const User = await axios.get(
+        `https://stockflow-clone.onrender.com/user/${params.id}`
+      );
       setUser(User.data);
     } catch (error) {
       console.log(error);

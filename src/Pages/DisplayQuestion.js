@@ -18,7 +18,7 @@ function DisplayQuestion() {
   const getQuestion = async () => {
     try {
       const Question = await axios.get(
-        `http://localhost:8000/question/${params.id}`,
+        `https://stockflow-clone.onrender.com/question/${params.id}`,
         {
           headers: {
             Authorization: `${window.localStorage.getItem("token")}`,
@@ -34,7 +34,7 @@ function DisplayQuestion() {
 
   const getAnswer = async () => {
     const Answer = await axios.get(
-      `http://localhost:8000/answer/${params.id}`,
+      `https://stockflow-clone.onrender.com/answer/${params.id}`,
       {
         headers: {
           Authorization: `${window.localStorage.getItem("token")}`,
@@ -61,12 +61,20 @@ function DisplayQuestion() {
       return errors;
     },
     onSubmit: async (values) => {
-      await axios.post("http://localhost:8000/answer", values, {
-        headers: {
-          Authorization: `${window.localStorage.getItem("token")}`,
-        },
-      });
-      nav("/portal/questions");
+      try {
+        await axios.post(
+          "https://stockflow-clone.onrender.com/answer",
+          values,
+          {
+            headers: {
+              Authorization: `${window.localStorage.getItem("token")}`,
+            },
+          }
+        );
+        nav("/portal/questions");
+      } catch (error) {
+        console.log(error);
+      }
     },
   });
   return (

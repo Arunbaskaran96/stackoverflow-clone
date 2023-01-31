@@ -25,7 +25,10 @@ function Login() {
     },
     onSubmit: async (values) => {
       try {
-        const login = await axios.post("http://localhost:8000/login", values);
+        const login = await axios.post(
+          "https://stockflow-clone.onrender.com/login",
+          values
+        );
         window.localStorage.setItem("token", login.data.token);
         nav("/portal/questions");
       } catch (error) {

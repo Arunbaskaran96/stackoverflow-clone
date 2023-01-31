@@ -41,7 +41,10 @@ function Register() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post("http://localhost:8000/register", values);
+        await axios.post(
+          "https://stockflow-clone.onrender.com/register",
+          values
+        );
         nav("/");
       } catch (error) {
         console.log(error);
