@@ -1,0 +1,61 @@
+.users-card{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 15px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+p,h5,h6{ 
+    margin: 0px;
+}
+
+.ask-container{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    box-shadow: 0px 1px 5px #00000033;
+    padding-left: 15px;
+}
+.ints{
+    width: 1000px;
+    border-radius: 15px;
+    height: 35px;
+}
+.body-ints{
+    width: 1000px;
+    border-radius: 15px;
+    height: 100px;
+}
+.lb{
+    margin:7px 0px
+}
+
+
+.inputs{
+    margin: 5px 0px;
+    width: 350px;
+    border-radius: 10px;
+}
+.user-details{
+    margin: 5px;
+}
+.user-detail{
+    margin: 1px;
+}
+.ques-heading{
+    margin: 8px;
+}
+.ques-details{
+    margin: 3px;
+}
+.int-ans{
+    height: 100px;
+    width: 700px;
+    border-radius: 5px;
+}
